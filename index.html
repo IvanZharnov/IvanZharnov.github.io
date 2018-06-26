@@ -9,25 +9,86 @@
 
 <body>
 
-<div class="Header">
+<header class="Header">
  <a href="https://www.google.com/intl/ru/gmail/about/#" class="Header_Link1">Почта</a>
  <a href="https://www.google.by/imghp?hl=ru&tab=wi"class="Header_Link2">Картинки</a>
- <a href="https://www.google.by/intl/ru/options/" title="Приложения Google" class="Header_Button3"></a>
+ <a title="Приложения Google" onclick="openMenu()">
+  <svg  class="Header_Button3" title="Приложения Google"></svg>
+ </a>
  <a href="https://accounts.google.com/signin/v2/identifier?hl=ru&passive=true&continue=https%3A%2F%2Fwww.google.by%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="Header_Button4">Войти</a>
+</header>
+
+<div class="Menu" id="Menu">
+
+  <div class="MenuIconsPlace">
+    <a href="https://myaccount.google.com/intro?utm_source=OGB&utm_medium=app" class="MenuIcons">
+      <img src="account1.png" class="MenuImage"></img>
+      <div class="MenuTitle">Мой аккаунт</div>
+    </a>
+    <a href="https://www.google.by/webhp?tab=ww" class="MenuIcons">
+      <img src="search2.png" class="MenuImage"></img>
+      <div class="MenuTitle">Поиск</div>
+    </a>
+    <a href="https://www.google.by/maps?hl=ru&tab=wl" class="MenuIcons">
+      <img src="maps3.png" class="MenuImage"></img>
+      <div class="MenuTitle">Карты</div>
+    </a>
+    <a href="https://www.youtube.com/?gl=BY" class="MenuIcons">
+      <img src="youtube4.png" class="MenuImage"></img>
+      <div class="MenuTitle">YouTube</div>
+    </a>
+    <a href="https://play.google.com/store?hl=ru&tab=w8" class="MenuIcons">
+      <img src="googleplay5.png" class="MenuImage"></img>
+      <div class="MenuTitle">Play</div>
+    </a>
+    <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Ftab%3Dwm&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="MenuIcons">
+      <img src="gmail6.png" class="MenuImage"></img>
+      <div class="MenuTitle">Почта</div>
+    </a>
+    <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=contacts&passive=1209600&continue=https%3A%2F%2Fwww.google.com%2Fcontacts%2F%3Fhl%3Dru%26tab%3DwC&followup=https%3A%2F%2Fwww.google.com%2Fcontacts%2F%3Fhl%3Dru%26tab%3DwC&hl=ru&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="MenuIcons">
+      <img src="contacts7.png" class="MenuImage"></img>
+      <div class="MenuTitle">Контакты</div>
+    </a>
+    <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=wise&passive=1209600&osid=1&continue=https%3A%2F%2Fdrive.google.com%2F%3Ftab%3Dwo&followup=https%3A%2F%2Fdrive.google.com%2F%3Ftab%3Dwo&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="MenuIcons">
+      <img src="google-drive8.png" class="MenuImage"></img>
+      <div class="MenuTitle">Диск</div>
+    </a>
+    <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=cl&passive=1209600&osid=1&continue=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Frender%3Ftab%3Dwc&followup=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Frender%3Ftab%3Dwc&scc=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="MenuIcons">
+      <img src="calendar9.png" class="MenuImage"></img>
+      <div class="MenuTitle">Календарь</div>
+    </a>
+    <a href="https://plus.google.com/discover" class="MenuIcons">
+      <img src="google-plus10.png" class="MenuImage"></img>
+      <div class="MenuTitle">Google+</div>
+    </a>
+    <a href="https://translate.google.by/?hl=ru&tab=wT" class="MenuIcons">
+      <img src="translate11.png" class="MenuImage"></img>
+      <div class="MenuTitle">Переводчик</div>
+    </a>
+    <a href="https://www.google.com/photos/about/" class="MenuIcons">
+      <img src="photo12.png" class="MenuImage"></img>
+      <div class="MenuTitle">Фото</div>
+    </a>
+  </div>
+  <a href="https://www.google.by/intl/ru/about/products/" class="MenuFooter" >Ещё</a>
+
+
 </div>
 
-<div class="Main">
+<form class="Main" action="https://www.google.by/search" method="get" onClick="closeMenu()">
 
   <img src="Doodle.gif" class="Main_Image">
 
   <div class="Main_Search">
-   <input type="text" placeholder="" title="Поиск" class="Search"></input>
-   <a  class="Keyboard" title="Экранная клавиатура"></a>
+   <input type="text" name="q" placeholder="" autocomplete="off" title="Поиск" class="Search"></input>
+   <a title="Экранная клавиатура">
+     <svg class="Keyboard" title="Экранная клавиатура"></svg>
+   </a>
    <a  class="Microphone" title="Голосовой поиск"></a>
   </div>
 
   <div class="Main_Buttons">
-   <a href="" class="Main_Button1">Поиск в Google</a>
+   <button type="submit" class="Main_Button1">Поиск в Google</button>
    <a href="https://www.google.com/doodles" class="Main_Button2">Мне повезёт!</a>
   </div>
 
@@ -36,9 +97,9 @@
     <a href="" class="Main_Bel">Беларуская</a>
   </div>
 
-</div>
+</form>
 
-<div class="Footer">
+<footer class="Footer">
   <div class="Footer_Bel">
     Беларусь
   </div>
@@ -56,7 +117,22 @@
       <a href="https://www.google.by/preferences?hl=ru" >Настройки</a>
     </div>
   </div>
-</div>
+</footer>
+
+<script>
+  var s = document.getElementById("Menu")
+  console.log(s);
+  function openMenu() {
+    if (s.style.display==="flex") {
+      s.style.display="none"
+    } else
+     s.style.display="flex"
+  }
+
+  function closeMenu() {
+    s.style.display="none"
+  }
+</script>
 
 </body>
 </html>
