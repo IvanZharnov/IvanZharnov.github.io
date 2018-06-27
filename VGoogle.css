@@ -82,8 +82,8 @@ a.Header_Button4:active {
 .Menu {
   display: none;
   flex-direction: column;
-  width: 23.5%;
-  height: 75%;
+  width: 320px;
+  height: 496px;
   box-shadow: 0 2px 10px -1px #bababa;
   border-width: 1px;
   border-style: solid;
